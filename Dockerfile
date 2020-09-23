@@ -1,4 +1,4 @@
-FROM adoptopenjdk:11-jdk-openj9
+FROM gradle:jdk11
 
 COPY . /home/app/demo
 
