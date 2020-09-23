@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.example
+testFramework: spock
+sourceLanguage: java
+buildTool: gradle
+features: [annotation-api, app-name, cache-caffeine, docker, file-watch, flyway, graalvm, gradle, graphql, h2, hibernate-jpa, hibernate-validator, http-client, java, java-application, jdbc-hikari, jib, kubernetes, logback, management, nats, netty-server, openapi, readme, redis-lettuce, rxjava3, spock, testcontainers, views-thymeleaf, yaml]
