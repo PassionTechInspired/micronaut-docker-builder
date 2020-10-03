@@ -1,10 +1,8 @@
-## Feature hibernate-jpa documentation
+## Feature cache-caffeine documentation
 
-- [Micronaut Hibernate JPA documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#hibernate)
+- [Micronaut Caffeine Cache documentation](https://micronaut-projects.github.io/micronaut-cache/latest/guide/index.html)
 
-## Feature management documentation
-
-- [Micronaut Micronaut Management documentation](https://docs.micronaut.io/latest/guide/index.html#management)
+- [https://github.com/ben-manes/caffeine](https://github.com/ben-manes/caffeine)
 
 ## Feature graphql documentation
 
@@ -16,25 +14,9 @@
 
 - [https://kubernetes.io/docs/home/](https://kubernetes.io/docs/home/)
 
-## Feature openapi documentation
+## Feature jdbc-hikari documentation
 
-- [Micronaut OpenAPI Support documentation](https://micronaut-projects.github.io/micronaut-openapi/latest/guide/index.html)
-
-- [https://www.openapis.org](https://www.openapis.org)
-
-## Feature http-client documentation
-
-- [Micronaut Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
-
-## Feature testcontainers documentation
-
-- [https://www.testcontainers.org/](https://www.testcontainers.org/)
-
-## Feature flyway documentation
-
-- [Micronaut Flyway Database Migration documentation](https://micronaut-projects.github.io/micronaut-flyway/latest/guide/index.html)
-
-- [https://flywaydb.org/](https://flywaydb.org/)
+- [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
 
 ## Feature views-thymeleaf documentation
 
@@ -42,21 +24,31 @@
 
 - [https://www.thymeleaf.org/](https://www.thymeleaf.org/)
 
-## Feature cache-caffeine documentation
+## Feature openapi documentation
 
-- [Micronaut Caffeine Cache documentation](https://micronaut-projects.github.io/micronaut-cache/latest/guide/index.html)
+- [Micronaut OpenAPI Support documentation](https://micronaut-projects.github.io/micronaut-openapi/latest/guide/index.html)
 
-- [https://github.com/ben-manes/caffeine](https://github.com/ben-manes/caffeine)
+- [https://www.openapis.org](https://www.openapis.org)
 
-## Feature jdbc-hikari documentation
+## Feature flyway documentation
 
-- [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
+- [Micronaut Flyway Database Migration documentation](https://micronaut-projects.github.io/micronaut-flyway/latest/guide/index.html)
 
-## Feature hibernate-validator documentation
+- [https://flywaydb.org/](https://flywaydb.org/)
 
-- [Micronaut Hibernate Validator documentation](https://micronaut-projects.github.io/micronaut-hibernate-validator/latest/guide/index.html)
+## Feature management documentation
 
-## Feature rxjava3 documentation
+- [Micronaut Micronaut Management documentation](https://docs.micronaut.io/latest/guide/index.html#management)
 
-- [Micronaut RxJava 3 documentation](https://micronaut-projects.github.io/micronaut-rxjava3/snapshot/guide/index.html)
+## Feature testcontainers documentation
+
+- [https://www.testcontainers.org/](https://www.testcontainers.org/)
+
+## Feature http-client documentation
+
+- [Micronaut Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
+
+## Feature hibernate-jpa documentation
+
+- [Micronaut Hibernate JPA documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#hibernate)
 
