@@ -1,6 +1,8 @@
 plugins {
     id "groovy"
+    id "com.github.johnrengelman.shadow" version "6.0.0"
     id "io.micronaut.application" version '1.0.3'
+    id "com.google.protobuf" version "0.8.13"
     id "com.google.cloud.tools.jib" version "2.5.0"
 }
 
@@ -36,6 +38,7 @@ dependencies {
     implementation("io.micronaut.sql:micronaut-hibernate-jpa")
     implementation("io.micronaut.cassandra:micronaut-cassandra")
     implementation("io.micronaut.graphql:micronaut-graphql")
+    implementation("io.micronaut.grpc:micronaut-grpc-runtime")
     implementation("io.micronaut.redis:micronaut-redis-lettuce")
     implementation("io.micronaut.cache:micronaut-cache-caffeine")
     implementation("io.micronaut.nats:micronaut-nats")
@@ -44,6 +47,7 @@ dependencies {
     runtimeOnly("org.postgresql:postgresql")
     testImplementation(platform("org.testcontainers:testcontainers-bom:1.14.3"))
     testRuntimeOnly("org.testcontainers:postgresql")
+    testRuntimeOnly("org.testcontainers:cassandra")
 }
 
 mainClassName = "com.example.Application"
@@ -52,7 +56,24 @@ java {
     targetCompatibility = JavaVersion.toVersion('14')
 }
 
+sourceSets {
+    main {
+        java {
+            srcDirs 'build/generated/source/proto/main/grpc'
+            srcDirs 'build/generated/source/proto/main/java'
+        }
+    }
+}
 
+protobuf {
+    protoc { artifact = "com.google.protobuf:protoc:$protocVersion" }
+    plugins {
+        grpc { artifact = "io.grpc:protoc-gen-grpc-java:$protocGenGrpcVersion" }
+    }
+    generateProtoTasks {
+        all()*.plugins { grpc {} }
+    }
+}
 
 jib.to.image = 'gcr.io/demo/jib-image'
 

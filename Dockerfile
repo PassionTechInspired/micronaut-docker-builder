@@ -1,7 +1,11 @@
-FROM gradle:jdk14
+FROM adoptopenjdk:14-hotspot
 
-COPY . /home/app/demo
+WORKDIR /home/app/demo
+COPY . .
 
-RUN cd /home/app/demo && gradle dependencies build test assemble --quiet
-
+RUN ./gradlew dependencies
+RUN ./gradlew build
+RUN ./gradlew assemble
+# RUN ./gradlew build assemble --quiet && \
+RUN ./gradlew clean
 RUN rm -rf /home/app/demo
