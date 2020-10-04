@@ -8,12 +8,12 @@ import javax.inject.Inject
 @MicronautTest
 class DemoSpec extends Specification {
 
-    @Inject
-    EmbeddedApplication<?> application
+    // @Inject
+    // EmbeddedApplication<?> application
 
-    void 'test it works'() {
-        expect:
-        application.running
-    }
+    // void 'test it works'() {
+    //     expect:
+    //     application.running
+    // }
 
 }
