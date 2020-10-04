@@ -52,7 +52,6 @@ dependencies {
     testCompileOnly("org.projectlombok:lombok:$lombokVersion")
     testAnnotationProcessor("org.projectlombok:lombok:$lombokVersion")
     testImplementation(platform("org.testcontainers:testcontainers-bom:$testContainerVersion"))
-    testImplementation(platform("org.testcontainers:testcontainers-bom:$testContainerVersion"))
     testRuntimeOnly("org.testcontainers:postgresql")
     testRuntimeOnly("org.testcontainers:cassandra")
     implementation("com.github.javafaker:javafaker:$javaFakerVersion")
