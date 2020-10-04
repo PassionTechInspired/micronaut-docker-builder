@@ -10,4 +10,4 @@ COPY . .
 
 RUN ./gradlew dependencies assemble build --quiet
 
-RUN ./gradlew clean && rm -rf /home/app/demo
+RUN ./gradlew clean && rm -rf /app/
