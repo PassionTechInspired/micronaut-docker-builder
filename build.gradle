@@ -24,6 +24,8 @@ micronaut {
 }
 
 dependencies {
+    compileOnly("org.projectlombok:lombok:$lombokVersion")
+    annotationProcessor("org.projectlombok:lombok:$lombokVersion")
     annotationProcessor("io.micronaut.data:micronaut-data-processor")
     annotationProcessor("io.micronaut.openapi:micronaut-openapi")
     implementation("io.micronaut:micronaut-validation")
@@ -44,11 +46,16 @@ dependencies {
     implementation("io.micronaut.cache:micronaut-cache-caffeine")
     implementation("io.micronaut.nats:micronaut-nats")
     implementation("io.micronaut.views:micronaut-views-thymeleaf")
+    implementation("com.graphql-java-kickstart:graphql-java-tools:$graphqlJavaToolsVersion")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("org.postgresql:postgresql")
-    testImplementation(platform("org.testcontainers:testcontainers-bom:1.14.3"))
+    testCompileOnly("org.projectlombok:lombok:$lombokVersion")
+    testAnnotationProcessor("org.projectlombok:lombok:$lombokVersion")
+    testImplementation(platform("org.testcontainers:testcontainers-bom:$testContainerVersion"))
+    testImplementation(platform("org.testcontainers:testcontainers-bom:$testContainerVersion"))
     testRuntimeOnly("org.testcontainers:postgresql")
     testRuntimeOnly("org.testcontainers:cassandra")
+    implementation("com.github.javafaker:javafaker:$javaFakerVersion")
 }
 
 mainClassName = "com.example.Application"
