@@ -1,4 +1,4 @@
-FROM adoptopenjdk:14-hotspot
+FROM adoptopenjdk:15-hotspot
 
 RUN apt update && \
     apt install git -y && \
